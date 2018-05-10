@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 class TaskItem extends Component {
   render() {
 
-    var {task} = this.props;
-    
+    var {task, index} = this.props;
+
     return (
         <tr>
-            <td>1</td>
-            <td>Algo & DS</td>
+            <td>{ index }</td>
+            <td>{ task.name }</td>
             <td className="text-center">
                 <span className="label label-success">
                     Online
