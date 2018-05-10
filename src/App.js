@@ -13,8 +13,41 @@ class App extends Component {
         }
     }
 
+    //Lifecycle
+    componentWillMount() {
+        if(localStorage && localStorage.getItem('tasks')) {
+            var tasks = JSON.parse(localStorage.getItem('tasks'))
+            this.setState({
+                tasks : tasks
+            });
+        }
+    }
+
     onGenerateData = () => {
-        console.log('clicked')
+        var tasks = [
+            {
+                id: this.generateID(),
+                name: 'Angular',
+                status: true
+            },
+
+            {
+                id: this.generateID(),
+                name: 'React',
+                status: false
+            }
+        ];
+
+        // Save to localStorage
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+    }
+
+    s4() {
+        return Math.floor( ( 1 + Math.random() ) * 0x10000 ).toString(16).substring(1);
+    }
+
+    generateID() {
+        return this.s4() + this.s4() + '-' + this.s4() + '-' + this.s4() + this.s4();
     }
 
     render() {
