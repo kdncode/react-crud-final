@@ -2,8 +2,26 @@ import React, { Component } from 'react';
 
 class TaskForm extends Component {
   
+  constructor(props){
+      super(props);
+      
+      this.state = ({
+            name: '',
+            status: false
+      })
+  }
+
   onCloseForm = () => {
     this.props.onCloseForm();
+  }
+
+  onChange = (event) => {    
+    var target = event.target;
+    var name = target.name;
+    var value = target.value;
+    this.setState({
+        [name] : value
+    })
   }
 
   render() {
@@ -24,14 +42,18 @@ class TaskForm extends Component {
                             <label>Name:</label>
                             <input type="text" 
                                    className="form-control"
-                                   name="name" />
+                                   name="name"
+                                   value={this.state.name} 
+                                   onChange={this.onChange}/>
                         </div>
                         <label>Status:</label>
                         <select className="form-control" 
                                 required="required"
-                                name="status">
-                            <option value="1">Online</option>
-                            <option value="0">Offline</option>
+                                name="status"
+                                value={this.state.status} 
+                                onChange={this.onChange}>
+                            <option value={true}>Online</option>
+                            <option value={false}>Offline</option>
                         </select>
                         <br/>
                         <div className="text-center">
