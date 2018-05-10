@@ -51,6 +51,7 @@ class App extends Component {
     }
 
     render() {
+        var { tasks }  = this.state; // var tasks = this.state.tasks
         return (
             <div className="container">
                 <div className="text-center">
@@ -83,7 +84,7 @@ class App extends Component {
                         <div className="row mt-15">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 {/* TaskList */}
-                                <TaskList/>
+                                <TaskList tasks= { tasks } />
                             </div>
                         </div>
                     </div>
