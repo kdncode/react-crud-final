@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 
 class TaskForm extends Component {
+  
+  onCloseForm = () => {
+    this.props.onCloseForm();
+  }
+
   render() {
         return (
             <div className="panel panel-warning">
                 <div className="panel-heading">
-                    <h3 className="panel-title">Add task</h3>
+                    <h3 className="panel-title">
+                        Add task 
+                        <span
+                            className="fa fa-times-circle text-right"
+                            onClick={ this.onCloseForm }
+                        ></span>
+                    </h3>
                 </div>
                 <div className="panel-body">
                     <form>
                         <div className="form-group">
                             <label>Name:</label>
-                            <input type="text" className="form-control" />
+                            <input type="text" 
+                                   className="form-control"
+                                   name="name" />
                         </div>
                         <label>Status:</label>
-                        <select className="form-control" required="required">
+                        <select className="form-control" 
+                                required="required"
+                                name="status">
                             <option value="1">Online</option>
                             <option value="0">Offline</option>
                         </select>

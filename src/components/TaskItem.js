@@ -10,8 +10,8 @@ class TaskItem extends Component {
             <td>{ index }</td>
             <td>{ task.name }</td>
             <td className="text-center">
-                <span className="label label-success">
-                    Online
+                <span className={task.status === true ? 'label label-success' : 'label label-danger'}>
+                    {task.status === true ? 'Online' : 'Offline'}
                 </span>
             </td>
             

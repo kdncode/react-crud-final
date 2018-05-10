@@ -1,6 +1,11 @@
 .mt-15{
   margin-top: 15px;
 }
+
+.text-right {
+  margin-left: 250px;
+}
+
 .App {
   text-align: center;
 }
