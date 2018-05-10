@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 class TaskItem extends Component {
   render() {
+
+    var {task} = this.props;
+    
     return (
         <tr>
             <td>1</td>
