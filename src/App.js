@@ -30,7 +30,6 @@ class App extends Component {
                 name: 'Angular',
                 status: true
             },
-
             {
                 id: this.generateID(),
                 name: 'React',

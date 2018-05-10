@@ -38,9 +38,7 @@ class TaskList extends Component {
                 {/* TaskItem */}
                 { elementTasks }
 
-
             </tbody>
-
         </table>
     );
   }
