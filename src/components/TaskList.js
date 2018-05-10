@@ -32,8 +32,6 @@ class TaskList extends Component {
 
                 {/* TaskItem */}
                 <TaskItem />
-                <TaskItem />
-                <TaskItem />
 
             </tbody>
 
