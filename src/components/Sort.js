@@ -14,14 +14,14 @@ class Sort extends Component {
                                     <span className="fa fa-sort-alpha-asc pr-5">
                                         Name A-Z
                                     </span>
-                                </a>
+                        </a>
                     </li>
                     <li>
                         <a role="button">
                                     <span className="fa fa-sort-alpha-desc pr-5">
                                         Name Z-A
                                     </span>
-                                </a>
+                        </a>
                     </li>
                     <li role="separator" className="divider"></li>
                     <li><a role="button">Online</a></li>
